@@ -20,19 +20,19 @@ let package = Package(
             dependencies: [],
             path: ".",
             sources: ["SyncKit/Classes/QSSynchronizer"]
-        )
+        ),
         .target(
             name: "SyncKit/CoreData",
-            dependencies: [SyncKit/Core"],
+            dependencies: ["SyncKit/Core"],
             path: ".",
             sources: ["SyncKit/Classes/CoreData"]
-        )
+        ),
          .target(
             name: "SyncKit/Realm",
-            dependencies: [Realm", "SyncKit/Core"],
+            dependencies: ["Realm", "SyncKit/Core"],
             path: ".",
             sources: ["SyncKit/Classes/Realm"]
-        )
+        ),
         .target(
             name: "SyncKit/RealmSwift",
             dependencies: ["RealmSwift", "Realm", "SyncKit/Core"],
