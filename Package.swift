@@ -10,13 +10,14 @@ let package = Package(
         .watchOS(.v3)
     ],
     products: [
-        .library(name: "SyncKit/CoreData", targets: ["SyncKit/CoreData"]),
-        .library(name: "SyncKit/Realm", targets: ["SyncKit/Realm"]),
+        //.library(name: "SyncKit/CoreData", targets: ["SyncKit/CoreData"]),
+        //.library(name: "SyncKit/Realm", targets: ["SyncKit/Realm"]),
         .library(name: "SyncKit/RealmSwift", targets: ["SyncKit/RealmSwift"])],
     dependencies: [
         .package(url: "https://github.com/realm/realm-cocoa", from: "10.1.2")
     ],
     targets: [
+        /*
         .target(
             name: "SyncKit/CoreData",
             dependencies: [],
@@ -29,6 +30,7 @@ let package = Package(
             path: ".",
             sources: ["SyncKit/Classes/QSSynchronizer", "SyncKit/Classes/Realm"]
         ),
+ */
         .target(
             name: "SyncKit/RealmSwift",
             dependencies: ["RealmSwift", "Realm"],
