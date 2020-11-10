@@ -16,26 +16,26 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SyncKit/Core",
+            name: "SyncKit",
             dependencies: [],
             path: ".",
             sources: ["SyncKit/Classes/QSSynchronizer"]
         ),
         .target(
             name: "SyncKit/CoreData",
-            dependencies: ["SyncKit/Core"],
+            dependencies: ["SyncKit"],
             path: ".",
             sources: ["SyncKit/Classes/CoreData"]
         ),
          .target(
             name: "SyncKit/Realm",
-            dependencies: ["Realm", "SyncKit/Core"],
+            dependencies: ["Realm", "SyncKit"],
             path: ".",
             sources: ["SyncKit/Classes/Realm"]
         ),
         .target(
             name: "SyncKit/RealmSwift",
-            dependencies: ["RealmSwift", "Realm", "SyncKit/Core"],
+            dependencies: ["RealmSwift", "Realm", "SyncKit"],
             path: ".",
             sources: ["SyncKit/Classes/RealmSwift"]
         )
