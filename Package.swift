@@ -10,6 +10,7 @@ let package = Package(
         .watchOS(.v3)
     ],
     products: [
+        .library(name: "SyncKit/Core", targets: ["SyncKit/Core"]),
         .library(name: "SyncKit/CoreData", targets: ["SyncKit/CoreData"]),
         .library(name: "SyncKit/Realm", targets: ["SyncKit/Realm"]),
         .library(name: "SyncKit/RealmSwift", targets: ["SyncKit/RealmSwift"])],
