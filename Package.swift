@@ -10,7 +10,6 @@ let package = Package(
         .watchOS(.v3)
     ],
     products: [
-        .library(name: "SyncKit/Core", targets: ["SyncKit/Core"]),
         .library(name: "SyncKit/CoreData", targets: ["SyncKit/CoreData"]),
         .library(name: "SyncKit/Realm", targets: ["SyncKit/Realm"]),
         .library(name: "SyncKit/RealmSwift", targets: ["SyncKit/RealmSwift"])],
@@ -19,28 +18,22 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SyncKit/Core",
+            name: "SyncKit/CoreData",
             dependencies: [],
             path: ".",
-            sources: ["SyncKit/Classes/QSSynchronizer"]
-        ),
-        .target(
-            name: "SyncKit/CoreData",
-            dependencies: ["SyncKit/Core"],
-            path: ".",
-            sources: ["SyncKit/Classes/CoreData"]
+            sources: ["SyncKit/Classes/QSSynchronizer", "SyncKit/Classes/CoreData"]
         ),
          .target(
             name: "SyncKit/Realm",
-            dependencies: ["Realm", "SyncKit/Core"],
+            dependencies: ["Realm"],
             path: ".",
-            sources: ["SyncKit/Classes/Realm"]
+            sources: ["SyncKit/Classes/QSSynchronizer", "SyncKit/Classes/Realm"]
         ),
         .target(
             name: "SyncKit/RealmSwift",
-            dependencies: ["RealmSwift", "Realm", "SyncKit/Core"],
+            dependencies: ["RealmSwift", "Realm"],
             path: ".",
-            sources: ["SyncKit/Classes/RealmSwift"]
+            sources: ["SyncKit/Classes/QSSynchronizer", "SyncKit/Classes/RealmSwift"]
         )
     ],
     swiftLanguageVersions: [.v5]
