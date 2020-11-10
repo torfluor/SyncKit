@@ -25,19 +25,19 @@ let package = Package(
         ),
         .target(
             name: "SyncKit/CoreData",
-            dependencies: ["SyncKit"],
+            dependencies: ["SyncKit/Core"],
             path: ".",
             sources: ["SyncKit/Classes/CoreData"]
         ),
          .target(
             name: "SyncKit/Realm",
-            dependencies: ["Realm", "SyncKit"],
+            dependencies: ["Realm", "SyncKit/Core"],
             path: ".",
             sources: ["SyncKit/Classes/Realm"]
         ),
         .target(
             name: "SyncKit/RealmSwift",
-            dependencies: ["RealmSwift", "Realm", "SyncKit"],
+            dependencies: ["RealmSwift", "Realm", "SyncKit/Core"],
             path: ".",
             sources: ["SyncKit/Classes/RealmSwift"]
         )
