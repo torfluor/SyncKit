@@ -25,7 +25,7 @@ public class DefaultRealmProvider: NSObject, AdapterProvider {
     
     let identifier: String
     private(set) var adapterDictionary: [CKRecordZone.ID: RealmSwiftAdapter]
-    private(set) var realms: [CKRecordZone.ID: Realm.Configuration]
+    public private(set) var realms: [CKRecordZone.ID: Realm.Configuration]
     let appGroup: String?
     let realmConfiguration: Realm.Configuration
     
